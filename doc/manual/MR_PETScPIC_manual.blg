@@ -1,0 +1,9 @@
+[0] Config.pm:304> INFO - This is Biber 2.14
+[0] Config.pm:307> INFO - Logfile is 'MR_PETScPIC_manual.blg'
+[76] biber-darwin:322> INFO - === Thu Dec 21, 2023, 15:40:29
+[90] Biber.pm:415> INFO - Reading 'MR_PETScPIC_manual.bcf'
+[192] Biber.pm:943> INFO - Found 0 citekeys in bib section 0
+[196] Utils.pm:304> WARN - The file 'MR_PETScPIC_manual.bcf' does not contain any citations!
+[205] bbl.pm:652> INFO - Writing 'MR_PETScPIC_manual.bbl' with encoding 'UTF-8'
+[205] bbl.pm:755> INFO - Output to MR_PETScPIC_manual.bbl
+[205] Biber.pm:128> INFO - WARNINGS: 1

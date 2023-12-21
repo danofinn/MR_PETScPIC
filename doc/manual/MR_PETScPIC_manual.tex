@@ -1,0 +1,106 @@
+\documentclass[12pt]{report}
+\usepackage[letterpaper, left=1in, right=1in, top=1in, bottom=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,amsfonts}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{times} % Change to other font if needed
+\usepackage{setspace}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage[bookmarks=true, hidelinks]{hyperref}
+\usepackage[style=numeric, backend=biber, giveninits]{biblatex}
+\usepackage[utf8]{inputenc}
+\usepackage[explicit]{titlesec}
+\usepackage[titles]{tocloft}
+\usepackage{appendix}
+\usepackage{listings}
+\usepackage{subcaption}
+\usepackage{indentfirst}
+\usepackage{xfrac}
+\usepackage{lmodern}
+\usepackage{setspace}
+\usepackage{makecell, array}
+\usepackage{float}
+\usepackage{authblk}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}{Proposition}[section]
+\emergencystretch=1em
+\setcounter{secnumdepth}{3}
+\usepackage{url}
+
+%%% --- The following two lines are what needs to be added --- %%%
+\setcounter{biburllcpenalty}{7000}
+\setcounter{biburlucpenalty}{8000}
+
+\DeclareNameAlias{author}{family-given}
+\addbibresource{../citations.bib}
+\doublespacing
+\begin{document}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Additional Material
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Title Page
+%========================================
+\title{MRPETScPIC: A PETSc-Based, Particle-In-Cell Software for Magnetic Reconnection Simulations}
+\author[1]{Daniel S. Finn}
+\date{Last Updated: \today}
+\affil[1]{Naval Research Laboratory}
+\maketitle
+\currentpdfbookmark{Title Page}{TitlePage}
+
+% Table of Contents
+%========================================
+%\pagenumbering{roman} % Uncomment if Copyright and Acknowledgements are not in use
+% \setcounter{page}{4} % Uncomment if Copyright and Acknowledgements are not in use
+\renewcommand{\cftchapdotsep}{\cftdotsep}
+\renewcommand\contentsname{Table of Contents}
+\begin{singlespace}
+\tableofcontents
+\end{singlespace}
+\currentpdfbookmark{Table of Contents}{TOC}
+\clearpage
+
+% List of figures and tables
+%========================================
+\addcontentsline{toc}{chapter}{List of Tables}
+\begin{singlespace}
+	\setlength\cftbeforetabskip{\baselineskip}
+	\listoftables
+\end{singlespace}
+\clearpage
+
+\addcontentsline{toc}{chapter}{List of Figures}
+\begin{singlespace}
+    \setlength\cftbeforefigskip{\baselineskip}
+    \listoffigures
+\end{singlespace}
+\clearpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Main Content
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% resume page numbering for rest of document
+\clearpage
+\pagenumbering{arabic}
+\setcounter{page}{1} % set the page number appropriately
+
+% Chapter 1 - Introduction
+\input{Chapters/Chapter_Introduction.tex}
+\clearpage
+
+% Appendices
+% \input{Chapters/Appendix.tex}
+
+% Reference
+%========================================
+\addcontentsline{toc}{chapter}{References}
+\begin{singlespace}
+	\setlength\bibitemsep{\baselineskip}
+	\printbibliography[title={References}]
+\end{singlespace}
+
+\end{document}
